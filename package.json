@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.11.2",
+    "parcel": "^2.10.3"
+  },
+  "source": "html/index.html",
+  "name": "receitas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

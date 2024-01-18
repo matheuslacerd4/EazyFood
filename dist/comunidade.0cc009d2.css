@@ -1,0 +1,99 @@
+.comunidade {
+  letter-spacing: 1.5px;
+  background-color: #1b1b25;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  display: flex;
+}
+
+#txtcab {
+  color: #fff;
+  text-align: center;
+  margin: 30px 0 0;
+  padding-right: 0;
+}
+
+.containerglobal {
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  padding: 20px 280px;
+  display: flex;
+}
+
+.enviar {
+  border-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 468px;
+  padding-top: 0;
+  display: flex;
+}
+
+.enviar input {
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  width: 380px;
+  height: 40px;
+  padding-left: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+div.perfil {
+  color: #fff;
+  align-items: center;
+  gap: 15px;
+  width: 468px;
+  padding-top: 40px;
+  display: flex;
+}
+
+.userimg {
+  cursor: pointer;
+  background-image: url("perfil2.ead2b1eb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.receitaimg {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  width: 468px;
+  height: 500px;
+}
+
+.interacoes {
+  color: #fff;
+  flex-direction: column;
+  gap: 7px;
+  display: flex;
+}
+
+svg, .perfil span {
+  cursor: pointer;
+}
+
+.perfil span:hover, svg:hover {
+  opacity: .5;
+}
+
+.cabecalho {
+  justify-content: space-between;
+  display: flex;
+}
+
+.avaliacao {
+  gap: 10px;
+  display: flex;
+}
+
+.descricao {
+  cursor: default;
+}
+
+/*# sourceMappingURL=comunidade.0cc009d2.css.map */

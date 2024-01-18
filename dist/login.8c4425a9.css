@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 3px;
+  margin: 15px 0 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: url("receit.0d707516.svg") center / cover no-repeat;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+  height: 100vh;
+  display: flex;
+}
+
+.wrapper {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: #23232e;
+  background: none;
+  border: 2px solid #0003;
+  border-radius: 10px;
+  width: 420px;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px #0003;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.wrapper .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.input-box input {
+  color: #23232e;
+  background: none;
+  border: 2px solid #0003;
+  border-radius: 40px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px 45px 20px 20px;
+  font-size: 16px;
+}
+
+.input-box input::placeholder {
+  color: #23232e;
+}
+
+.input-box i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.wrapper .remember-forgot {
+  justify-content: space-between;
+  margin: -15px 0 15px;
+  font-size: 14.5px;
+  display: flex;
+}
+
+.remember-forgot label input {
+  accent-color: #23232e;
+  margin-right: 3px;
+}
+
+.remember-forgot {
+  color: #23232e;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.remember-forgot label a {
+  color: #000;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  color: #fff;
+  background-color: #23232e;
+  box-shadow: 0 0 10px #fff;
+}
+
+.btn-reg {
+  color: #23232e;
+  background-color: #fff;
+  box-shadow: 0 0 10px #23232e;
+}
+
+.wrapper .register-link {
+  text-align: center;
+  margin: 20px 0 15px;
+  font-size: 14.5px;
+}
+
+.register-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link p {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=login.8c4425a9.css.map */

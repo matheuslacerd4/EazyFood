@@ -15,6 +15,7 @@ a {
 
 .logo {
   font-size: 40px;
+  cursor: pointer;
 }
 
 .cabecalho {
@@ -132,6 +133,7 @@ div.upreceita {
   background-color: #8e407b;
   border-color: transparent;
   color: #fff;
+  cursor: pointer;
 }
 
 .btnup {
@@ -365,7 +367,7 @@ footer .end {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 1px;
   color: #fff;
-  background-color: #8e407b;
+  background-color: #913379;
 }
 
 /* css ---------------- cardupfoto */
@@ -378,7 +380,7 @@ footer .end {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  border: 2px solid #1b1b25;
+  border: 2px solid #c7c7c7;
   position: absolute;
   z-index: 100;
   top: 50%;

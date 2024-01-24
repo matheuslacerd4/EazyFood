@@ -1,23 +1,39 @@
 function init() {
   const button = document.getElementById("btnupfoto");
-  const body = document.getElementsByTagName("main")[0];
-  const btnfechar = document.getElementById("btnfechar");
+  const main = document.getElementsByTagName("main")[0];
+
+  const card = document.getElementById("cardRec");
+  const hrefreceita = "/html/receitas.html";
+
+  const btnupreceita = document.getElementById("btnupreceita");
+  const hrefupreceita = "/html/enviarreceita.html";
 
   button.addEventListener("click", (ev) => {
     ev.preventDefault();
     renderUpCardFoto();
   });
 
-  btnfechar.addEventListener("click", (ev) => {
+  main.addEventListener("click", (ev) => {
     ev.preventDefault();
+    const btnfechar = ev.target.closest("#btnfechar");
+    if (!btnfechar) return;
     fechar();
   });
 
+  btnupreceita.addEventListener("click", (ev) => {
+    ev.preventDefault;
+    upreceita(hrefupreceita);
+  });
+
+  card.addEventListener("click", (ev) => {
+    ev.preventDefault;
+    abrirCard(hrefreceita);
+  });
+
   function renderUpCardFoto() {
-    body.insertAdjacentHTML(
+    main.insertAdjacentHTML(
       "afterbegin",
       `
-      <body>
     <div id="cardupfoto" class="container-global">
       <header class="cabecalho">
         <h1>Criar publicação</h1>
@@ -27,6 +43,7 @@ function init() {
             width="16"
             height="16"
             fill="currentColor"
+            id="closesvg"
             class="bi bi-x-lg"
             viewBox="0 0 16 16"
           >
@@ -67,13 +84,20 @@ function init() {
         </div>
         </section>
         </div>
-        </body>
         `
     );
   }
 
   function fechar() {
     document.getElementById("cardupfoto").classList.add("fechar");
+  }
+
+  function upreceita(href) {
+    window.location.href = href;
+  }
+
+  function abrirCard(href) {
+    window.location.href = href;
   }
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas</title>
     <link rel="stylesheet" href="/index.e9a92ad8.css">
+    <script defer="" src="/index.82ef7fee.js"></script>
   </head>
   <body>
     <header>
@@ -12,7 +13,6 @@
         <div class="containerglobal">
           <a><h1 class="logo">🍆</h1></a>
           <ul class="nav-list">
-            <li><a href="/receitas.html">Receitas</a></li>
             <li><a href="/comunidade.html">Comunidade</a></li>
             <li><a href="/tutorial.html">Tutorial</a></li>
             <li><a href="/perfil.html">Perfil</a></li>
@@ -46,11 +46,12 @@
               Prepare receitas deliciosas e compartilhe sua foto com a
               comunidade
             </p>
-            <button class="btnup btnupfoto">Enviar foto</button>
+            <button id="btnupfoto" class="btnup btnupfoto">Enviar foto</button>
           </div>
           <div class="upcard upreceita">
             <p>Compartilhe suas próprias receitas com outras pessoas</p>
-            <button class="btnup btnupreceita">Enviar receita</button>
+            <a id="btnupreceita" class="btnup btnupreceita"><button>Enviar receita</button>
+            </a>
           </div>
         </div>
       </div>
@@ -81,7 +82,7 @@
         <div class="menu-cards">
           <ul class="menu-cards-list">
             <li>
-              <div class="card2">
+              <div class="card2" id="cardRec">
                 <p>feijão tropeiro</p>
               </div>
             </li>
@@ -140,6 +141,5 @@
         aplicações de receitas de cozinha para sua casa.
       </p>
     </footer>
-    <script src="/index.82ef7fee.js"></script>
   <script src="/html.c41be126.js"></script></body>
 </html>

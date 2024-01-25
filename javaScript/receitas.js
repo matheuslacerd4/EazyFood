@@ -37,4 +37,5 @@ function init() {
     btnlike.style.fill = "#fff";
   }
 }
+/* teste */
 init();

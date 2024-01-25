@@ -17,5 +17,6 @@ function init() {
     btngostou.style.fill = "#fff";
   }
 }
+/* teste */
 
 init();

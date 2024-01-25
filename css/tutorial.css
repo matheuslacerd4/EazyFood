@@ -76,3 +76,11 @@
   align-items: center;
   gap: 4px;
 }
+
+#btnlike {
+  cursor: pointer;
+}
+
+#btnlike:hover {
+  opacity: 0.7;
+}

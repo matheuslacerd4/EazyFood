@@ -8,7 +8,6 @@ function init() {
   });
 
   function closeregistrar(href) {
-    console.log("maca");
     window.location.href = href;
   }
 }

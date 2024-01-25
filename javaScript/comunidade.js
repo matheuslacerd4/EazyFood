@@ -3,6 +3,9 @@ function init() {
   console.log(enviar);
   const section = document.getElementsByTagName("section")[0];
 
+  const btnlike = document.getElementById("btnlike");
+  const btnsalvar = document.getElementById("btnsalvar");
+
   enviar.addEventListener("click", (ev) => {
     ev.preventDefault();
     renderimg();
@@ -13,6 +16,25 @@ function init() {
     const btnfechar = ev.target.closest("#btnfechar");
     if (!btnfechar) return;
     fechar();
+  });
+
+  btnlike.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    deulike();
+  });
+
+  btnlike.addEventListener("dblclick", (ev) => {
+    ev.preventDefault();
+    tiroulike();
+  });
+
+  btnsalvar.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    salvou();
+  });
+  btnsalvar.addEventListener("dblclick", (ev) => {
+    ev.preventDefault();
+    nsalvou();
   });
 
   function renderimg() {
@@ -75,6 +97,22 @@ function init() {
 
   function fechar() {
     document.getElementById("cardupfoto").classList.add("fechar");
+  }
+
+  function deulike() {
+    btnlike.style.color = "#8e407b";
+  }
+
+  function tiroulike() {
+    btnlike.style.color = "#fff";
+  }
+
+  function salvou() {
+    btnsalvar.style.color = "#8e407b";
+  }
+
+  function nsalvou() {
+    btnsalvar.style.color = "#fff";
   }
 }
 

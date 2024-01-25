@@ -1,6 +1,6 @@
 function init() {
   const enviar = document.querySelector("#enviarimg");
-  console.log(enviar);
+
   const section = document.getElementsByTagName("section")[0];
 
   const btnlike = document.getElementById("btnlike");

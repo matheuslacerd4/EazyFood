@@ -1,13 +1,20 @@
 function init() {
-  const btngostou = document.querySelector("#btnlike");
+  const btngostou = document.getElementById("btnlike");
 
   btngostou.addEventListener("click", (ev) => {
     ev.preventDefault();
-    dlike();
+    gostou();
+  });
+  btngostou.addEventListener("dblclick", (ev) => {
+    ev.preventDefault();
+    ngostou();
   });
 
-  function dlike() {
-    btngostou.style.color = "#8e407b";
+  function gostou() {
+    btngostou.style.fill = "#8e407b";
+  }
+  function ngostou() {
+    btngostou.style.fill = "#fff";
   }
 }
 

@@ -1,3 +1,7 @@
+const state = {
+  recipes: [],
+};
+
 function init() {
   const button = document.getElementById("btnupfoto");
   const main = document.getElementsByTagName("main")[0];
@@ -100,5 +104,84 @@ function init() {
     window.location.href = href;
   }
 }
+async function searchRecipe(name) {
+  try {
+    const response = await fetch(
+      `https://forkify-api.herokuapp.com/api/v2/recipes?search=${name}&key=6d82df91-bef9-41f9-9f0c-fc404dcb088f`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    state.recipes = data.data.recipes;
+    console.log(state);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
-init();
+async function searchRecipeById(id) {
+  try {
+    const response = await fetch(
+      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}?key=6d82df91-bef9-41f9-9f0c-fc404dcb088f`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+function foodieatalho() {
+  const atalho = document.querySelector(".foodienames");
+  atalho.addEventListener("click", async (ev) => {
+    ev.preventDefault();
+    if (ev.target.tagName === "LI") await searchRecipe(ev.target.dataset.id);
+    rendercard();
+    eventcard()
+  });
+}
+
+function rendercard() {
+  const menucard = document.querySelector(".menu-cards");
+  menucard.insertAdjacentHTML(
+    "afterbegin",
+    `<ul class="menu-cards-list" style="list-style: none;">
+      ${state.recipes.map((recipe) => {
+        return `<li>
+          <div class="card2" id="cardRec" data-id="${recipe.id}" style="background-image: url(${recipe.image_url})">
+            <p>${recipe.title}</p>
+          </div>
+        </li>`
+      })}
+    </ul>`
+  );
+}
+
+function eventcard() {
+  const ulpai = document.querySelector(".menu-cards-list")
+  ulpai.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    const card = ev.target.closest(".card2")
+    window.location.href = `/html/receitas.html?id=${card.dataset.id}`
+    
+  })
+}
+
+function controller() {
+  foodieatalho();
+
+  // searchRecipe("cake");
+  // searchRecipeById("5ed6604591c37cdc054bcd09");
+  init();
+}
+
+controller();

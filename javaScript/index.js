@@ -6,9 +6,6 @@ function init() {
   const button = document.getElementById("btnupfoto");
   const main = document.getElementsByTagName("main")[0];
 
-  const card = document.getElementById("cardRec");
-  const hrefreceita = "/html/receitas.html";
-
   const btnupreceita = document.getElementById("btnupreceita");
   const hrefupreceita = "/html/enviarreceita.html";
 
@@ -27,11 +24,6 @@ function init() {
   btnupreceita.addEventListener("click", (ev) => {
     ev.preventDefault;
     upreceita(hrefupreceita);
-  });
-
-  card.addEventListener("click", (ev) => {
-    ev.preventDefault;
-    abrirCard(hrefreceita);
   });
 
   function renderUpCardFoto() {
@@ -99,10 +91,6 @@ function init() {
   function upreceita(href) {
     window.location.href = href;
   }
-
-  function abrirCard(href) {
-    window.location.href = href;
-  }
 }
 async function searchRecipe(name) {
   try {
@@ -146,7 +134,7 @@ function foodieatalho() {
     ev.preventDefault();
     if (ev.target.tagName === "LI") await searchRecipe(ev.target.dataset.id);
     rendercard();
-    eventcard()
+    eventcard();
   });
 }
 
@@ -155,25 +143,26 @@ function rendercard() {
   menucard.insertAdjacentHTML(
     "afterbegin",
     `<ul class="menu-cards-list" style="list-style: none;">
-      ${state.recipes.map((recipe) => {
-        return `<li>
+      ${state.recipes
+        .map((recipe) => {
+          return `<li>
           <div class="card2" id="cardRec" data-id="${recipe.id}" style="background-image: url(${recipe.image_url})">
             <p>${recipe.title}</p>
           </div>
-        </li>`
-      })}
-    </ul>`
+        </li>`;
+        })
+        .join("")}
+      </ul>`
   );
 }
 
 function eventcard() {
-  const ulpai = document.querySelector(".menu-cards-list")
+  const ulpai = document.querySelector(".menu-cards-list");
   ulpai.addEventListener("click", (ev) => {
     ev.preventDefault();
-    const card = ev.target.closest(".card2")
-    window.location.href = `/html/receitas.html?id=${card.dataset.id}`
-    
-  })
+    const card = ev.target.closest(".card2");
+    window.location.href = `/html/receitas.html?id=${card.dataset.id}`;
+  });
 }
 
 function controller() {
@@ -185,3 +174,10 @@ function controller() {
 }
 
 controller();
+
+// personalInstaThumb.innerHTML = `<ul>${response
+//   .map(
+//     (img, indice) =>
+//       `<li class="insta_thumb_item_${indice}"><img src=${img.images.url} width="150" height="150" /></li>`
+//   )
+//   .join("")}</ul>`;

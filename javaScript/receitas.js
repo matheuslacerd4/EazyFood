@@ -148,12 +148,14 @@ function renderrecipe() {
   <section class="ingredientes">
     <h3>ingredientes</h3>
     <ul>
-    ${state.recipe.ingredients.map((ingredient) => {
-      return `<li>
+    ${state.recipe.ingredients
+      .map((ingredient) => {
+        return `<li>
         <span>${ingredient.description}</span>
         <strong>${ingredient.quantity} ${ingredient.unit}</strong>
       </li>`;
-    })}
+      })
+      .join("")}
     </ul>
   </section>`
   );
